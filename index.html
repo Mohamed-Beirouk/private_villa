@@ -17,6 +17,32 @@
 
     <!-- Theme Style -->
     <link rel="stylesheet" href="css/style.css">
+
+ 
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css">
+  <style>
+    /* Styles for the modal */
+    .modal-dialog {
+      max-width: 70%;
+      margin: 1.75rem auto;
+    }
+
+    /* Custom styles for responsiveness */
+    @media (max-width: 576px) {
+      .modal-dialog {
+        margin: 0.5rem;
+      }
+    }
+
+    @media (min-width: 577px) and (max-width: 767px) {
+      .modal-dialog {
+        margin: 1rem;
+      }
+    }
+  </style>
   </head>
   <body>
     
@@ -24,65 +50,30 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-4 site-logo" data-aos="fade"><a href="index.html"><em>Villa</em></a></div>
-          <div class="col-8">
-
-
-            <div class="site-menu-toggle js-site-menu-toggle"  data-aos="fade">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <!-- END menu-toggle -->
-
-            <div class="site-navbar js-site-navbar">
-              <nav role="navigation">
-                <div class="container">
-                  <div class="row full-height align-items-center">
-                    <div class="col-md-6">
-                      <ul class="list-unstyled menu">
-                        <li class="active"><a href="index.html">Home</a></li>
-                        <li><a href="hotel.html">Hotel</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                      </ul>
-                    </div>
-                    <div class="col-md-6 extra-info">
-                      <div class="row">
-                        <div class="col-md-6 mb-5">
-                          <h3>Contact Info</h3>
-                          <p>98 West 21th Street, Suite 721 <br> New York NY 10016</p>
-                          <p>info@yourdomain.com</p>
-                          <p>(+1) 435 3533</p>
-                          
-                        </div>
-                        <div class="col-md-6">
-                          <h3>Connect With Us</h3>
-                          <ul class="list-unstyled">
-                            <li><a href="#">Twitter</a></li>
-                            <li><a href="#">Facebook</a></li>
-                            <li><a href="#">Instagram</a></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </nav>
-            </div>
           </div>
         </div>
       </div>
     </header>
     <!-- END head -->
 
-    <section class="site-hero overlay" style="background-image: url(img/hero_1.jpg)">
+    <section class="site-hero overlay" style="background-image: url(images/home.jpg)">
       <div class="container">
         <div class="row site-hero-inner justify-content-center align-items-center">
           <div class="col-md-10 text-center">
-            <h1 class="heading" data-aos="fade-up">Welcome to <em>Villa</em> resort</h1>
-            <p class="sub-heading mb-5" data-aos="fade-up" data-aos-delay="100">Discover our world-class hotel &amp; restaurant resort.</p>
-            <p data-aos="fade-up" data-aos-delay="100"><a href="#" class="btn uppercase btn-primary mr-md-2 mr-0 mb-3 d-sm-inline d-block">Explore The Beauty</a> <a href="#" class="btn uppercase btn-outline-light d-sm-inline d-block">Download</a></p>
+
+    <!-- <input type="button" id="booking-input" class="form-control" placeholder="Click here to book"> -->
+
+           <h1 class="heading" data-aos="fade-up">Welcome to <em>Villa 68 & 70</em></h1>
+            <h5 class="sub-heading mb-5" data-aos="fade-up" data-aos-delay="100">Discover our Villas  &amp; Other services.</p>
+            <!-- <span><h1>Villa 70 🏡</h1></span>
+        <p>
+          Master bedroom 👑, two queen bedrooms 👑👑, single bedroom 🛏️. four bathrooms 🚿🚿🚿🚿, three living rooms 🛋️🛋️🛋️, a kitchen 🍳, an outdoor kitchen 🍳🌞. the swimming pool 🏊‍♂️, private garden 🌳, and BBQ area 🍖. A TV 📺, reliable Wi-Fi 📶. A central AC ❄️. Additionally, an on-site parking 🅿️📍.
+        </p>
+        <span>3000 QAR 🇶🇦 a day for Thursday Friday and Saturday <br> </span>
+        <span>2500 QAR 🇶🇦 a day the rest of the days</span> -->
+            <p data-aos="fade-up" data-aos-delay="100"><button id="booking-input"  href="#" class="btn uppercase btn-primary mr-md-2 mr-0 mb-3 d-sm-inline d-block">Book now</button> 
+              <!-- <a href="#" class="btn uppercase btn-outline-light d-sm-inline d-block"></a> -->
+            </p>
           </div>
         </div>
         <!-- <a href="#" class="scroll-down">Scroll Down</a> -->
@@ -94,65 +85,34 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h2 class="heading" data-aos="fade-right">You Can Visit</h2>
+            <h2 class="heading" data-aos="fade-right">You Will get</h2>
           </div>
         </div>
         <div class="row">
           <div class="col-lg-3 col-md-6 visit mb-3" data-aos="fade-right">
-            <a href="restaurant.html"><img src="img/img_1.jpg" alt="Image placeholder" class="img-fluid"> </a>
-            <h3><a href="restaurant.html">Food &amp; Wines</a></h3>
-            <div class="reviews-star float-left">
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star-half"></span>
-              <span class="ion-android-star-outline"></span>
-            </div>
-            <span class="reviews-count float-right">
-              3,239 reviews
-            </span>
+            <a href=""><img src="images/card1.jpg" alt="Image placeholder" class="img-fluid"> </a>
+           
+            
           </div>
           <div class="col-lg-3 col-md-6 visit mb-3" data-aos="fade-right" data-aos-delay="100">
-            <a href="restaurant.html"><img src="img/img_2.jpg" alt="Image placeholder" class="img-fluid"> </a>
-            <h3><a href="restaurant.html">Resort &amp; Spa</a></h3>
-            <div class="reviews-star float-left">
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star-half"></span>
-              <span class="ion-android-star-outline"></span>
-            </div>
-            <span class="reviews-count float-right">
-              4,921 reviews
-            </span>
+            <a href=""><img src="images/card2.jpg" alt="Image placeholder" class="img-fluid"> </a>
+            
           </div>
           <div class="col-lg-3 col-md-6 visit mb-3" data-aos="fade-right" data-aos-delay="200">
-            <a href="hotel.html"><img src="img/img_4.jpg" alt="Image placeholder" class="img-fluid"> </a>
-            <h3><a href="hotel.html">Hotel Rooms</a></h3>
-            <div class="reviews-star float-left">
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star-outline"></span>
-            </div>
-            <span class="reviews-count float-right">
-              2,112 reviews
-            </span>
+            <a href=""><img src="images/card3.jpg" alt="Image placeholder" class="img-fluid"> </a>
+            
           </div>
           <div class="col-lg-3 col-md-6 visit mb-3" data-aos="fade-right" data-aos-delay="300">
-            <a href="yacht.html"><img src="img/img_5.jpg" alt="Image placeholder" class="img-fluid"> </a>
-            <h3><a href="yacht.html">Yacht Club</a></h3>
-            <div class="reviews-star float-left">
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star"></span>
-              <span class="ion-android-star-outline"></span>
-            </div>
-            <span class="reviews-count float-right">
-              6,421 reviews
-            </span>
+            <a href=""><img src="images/card4.jpg" alt="Image placeholder" class="img-fluid"> </a>
+            
+          </div>
+          <div class="col-lg-3 col-md-6 visit mb-3" data-aos="fade-right" data-aos-delay="300">
+            <a href=""><img src="images/card5.jpg" alt="Image placeholder" class="img-fluid"> </a>
+            
+          </div>
+          <div class="col-lg-3 col-md-6 visit mb-3" data-aos="fade-right" data-aos-delay="300">
+            <a href=""><img src="images/card6.jpg" alt="Image placeholder" class="img-fluid"> </a>
+            
           </div>
         </div>
       </div>
@@ -163,31 +123,41 @@
       <div class="container">
         <div class="row justify-content-center text-center mb-5">
           <div class="col-md-8">
-            <h2 class="heading" data-aos="fade-up">A gorgeous place to enjoy your life.</h2>
-            <p class="lead" data-aos="fade-up" data-aos-delay="100">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In dolor, iusto doloremque quo odio repudiandae sunt eveniet? Enim facilis laborum voluptate id porro, culpa maiores quis, blanditiis laboriosam alias. Sed.</p>
+            <h2 class="heading" data-aos="fade-up">Villa 70</h2>
+            <p class="lead" data-aos="fade-up" data-aos-delay="100">  Master bedroom 👑, two queen bedrooms 👑👑, single bedroom 🛏️. four bathrooms 🚿🚿🚿🚿, three living rooms 🛋️🛋️🛋️, a kitchen 🍳, an outdoor kitchen 🍳🌞. the swimming pool 🏊‍♂️, private garden 🌳, and BBQ area 🍖. A TV 📺, reliable Wi-Fi 📶. A central AC ❄️. Additionally, an on-site parking 🅿️📍.
+            </p>
+            <span>3000 QAR 🇶🇦 a day for Thursday Friday and Saturday <br> </span>
+        <span>2500 QAR 🇶🇦 a day the rest of the days</span>
+          </div>
+        </div>
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-md-8">
+            <h2 class="heading" data-aos="fade-up">Villa 68</h2>
+            <p class="lead" data-aos="fade-up" data-aos-delay="100">  Master bedroom 👑, two double bedrooms 👑👑, four bathrooms 🚿🚿🚿🚿, two living rooms 🛋️🛋️🛋️, akitchen 🍳, an outdoor kitchen 🍳🌞. A swimming pool 🏊‍♂️, private garden 🌳, and BBQ area 🍖. A TV 📺 and reliable Wi-Fi 📶. A central AC ❄️. Additionally, an on-site parking 🅿️📍.
+            </p>
+            <span>3000 QAR 🇶🇦 a day for Thursday Friday and Saturday <br> </span>
+        <span>2500 QAR 🇶🇦 a day the rest of the days</span>
           </div>
         </div>
         <div class="row">
           <div class="col-md-12">
             <div class="home-slider major-caousel owl-carousel mb-5" data-aos="fade-up" data-aos-delay="200">
               <div class="slider-item">
-                <img src="img/slider-1.jpg" alt="Image placeholder" class="img-fluid">
+                <img src="images/slider1.jpg" alt="Image placeholder" class="img-fluid">
               </div>
               <div class="slider-item">
-                <img src="img/slider-2.jpg" alt="Image placeholder" class="img-fluid">
+                <img src="images/slider2.jpg" alt="Image placeholder" class="img-fluid">
               </div>
               <div class="slider-item">
-                <img src="img/slider-3.jpg" alt="Image placeholder" class="img-fluid">
+                <img src="images/slider3.jpg" alt="Image placeholder" class="img-fluid">
               </div>
               <div class="slider-item">
-                <img src="img/slider-4.jpg" alt="Image placeholder" class="img-fluid">
+                <img src="images/slider4.jpg" alt="Image placeholder" class="img-fluid">
               </div>
               <div class="slider-item">
-                <img src="img/slider-5.jpg" alt="Image placeholder" class="img-fluid">
+                <img src="images/slider4.jpg" alt="Image placeholder" class="img-fluid">
               </div>
-              <div class="slider-item">
-                <img src="img/slider-6.jpg" alt="Image placeholder" class="img-fluid">
-              </div>
+              
             </div>
             <!-- END slider -->
           </div>
@@ -197,151 +167,66 @@
         </div>
       </div>
     </section>
-    <!-- END section -->
-    
-    <section class="section blog-post-entry bg-pattern">
-      <div class="container">
-        <div class="row justify-content-center text-center mb-5">
-          <div class="col-md-8">
-            <h2 class="heading" data-aos="fade-up">Recent Blog Post</h2>
-            <p class="lead" data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In dolor, iusto doloremque quo odio repudiandae sunt eveniet? Enim facilis laborum voluptate id porro, culpa maiores quis, blanditiis laboriosam alias. Sed.</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-4 col-md-6 col-sm-6 col-12 post" data-aos="fade-up" data-aos-delay="100">
-
-            <div class="media media-custom d-block mb-4">
-              <a href="#" class="mb-4 d-block"><img src="img/img_1.jpg" alt="Image placeholder" class="img-fluid"></a>
-              <div class="media-body">
-                <span class="meta-post">February 26, 2018</span>
-                <h2 class="mt-0 mb-3"><a href="#">Five Reasons to Stay at Villa Resort</a></h2>
-              </div>
-            </div>
-
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-6 col-12 post" data-aos="fade-up" data-aos-delay="200">
-            <div class="media media-custom d-block mb-4">
-              <a href="#" class="mb-4 d-block"><img src="img/img_2.jpg" alt="Image placeholder" class="img-fluid"></a>
-              <div class="media-body">
-                <span class="meta-post">February 26, 2018</span>
-                <h2 class="mt-0 mb-3"><a href="#">Five Reasons to Stay at Villa Resort</a></h2>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-6 col-12 post" data-aos="fade-up" data-aos-delay="300">
-            <div class="media media-custom d-block mb-4">
-              <a href="#" class="mb-4 d-block"><img src="img/img_3.jpg" alt="Image placeholder" class="img-fluid"></a>
-              <div class="media-body">
-                <span class="meta-post">February 26, 2018</span>
-                <h2 class="mt-0 mb-3"><a href="#">Five Reasons to Stay at Villa Resort</a></h2>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="container">
+    <section class="newsletter container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3595.788858810388!2d51.523347!3d25.678292999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDQwJzQxLjkiTiA1McKwMzEnMjQuMSJF!5e0!3m2!1sen!2s!4v1686253586639!5m2!1sen!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
-    <!-- END section -->
-    <section class="section testimonial-section">
-      <div class="container">
-        <div class="row justify-content-center text-center mb-5">
-          <div class="col-md-8">
-            <h2 class="heading" data-aos="fade-up">Testimonial</h2>
-          </div>
+    </div>
+    <br><br><br>
+
+    <div id="booking-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="booking-modal-label"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="booking-modal-label">Booking Details</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
-        <div class="row">
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="testimonial text-center">
-              <div class="author-image mb-3">
-                <img src="img/person_1.jpg" alt="Image placeholder" class="rounded-circle">
-              </div>
-              <blockquote>
-
-                <p>&ldquo;Et quidem, impedit eum fugiat excepturi iste aliquid suscipit, tempore, delectus rem soluta voluptatem distinctio sed dolores, magni fugit nemo cum expedita. Totam a accusantium sunt aut autem placeat officia.&rdquo;</p>
-              </blockquote>
-              <p><em>&mdash; Jean Smith</em></p>
-              
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" class="form-control" required>
             </div>
-          </div>
-          <!-- END col -->
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="testimonial text-center">
-              <div class="author-image mb-3">
-                <img src="img/person_2.jpg" alt="Image placeholder" class="rounded-circle">
-              </div>
-              <blockquote>
-                <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. In dolor, iusto doloremque quo odio repudiandae sunt eveniet? Enim facilis laborum voluptate id porro, culpa maiores quis, blanditiis laboriosam alias&rdquo;</p>
-              </blockquote>
-              <p><em>&mdash; John Doe</em></p>
+            <div class="form-group">
+              <label for="phone">Phone number:</label>
+              <input type="text" id="phone" class="form-control" required>
             </div>
-          </div>
-          <!-- END col -->
-
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="testimonial text-center">
-              <div class="author-image mb-3">
-                <img src="img/person_3.jpg" alt="Image placeholder" class="rounded-circle">
-              </div>
-              <blockquote>
-
-                <p>&ldquo;Nostrum, alias, provident magnam sit blanditiis laboriosam unde quaerat, at ipsam, ratione maiores saepe nisi modi corporis quas! Beatae quam, quod aspernatur debitis nesciunt quasi porro ea iste nobis aliquid perspiciatis nostrum culpa impedit aut, iure blanditiis itaque similique sunt!&rdquo;</p>
-              </blockquote>
-              <p><em>&mdash; John Doe</em></p>
+            <div class="form-group">
+              <label for="date-range">Date Range:</label>
+              <input type="text" id="date-range" class="form-control" required>
             </div>
-          </div>
-          <!-- END col -->
+            <button type="submit" class="btn btn-primary">Book</button>
+          </form>
         </div>
       </div>
-    </section>
-    <footer class="section footer-section">
-      <div class="container">
-        <div class="row mb-4">
-          <div class="col-md-3 mb-5">
-            <ul class="list-unstyled link">
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Terms &amp; Conditions</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Help</a></li>
-             <li><a href="#">Rooms</a></li>
-            </ul>
-          </div>
-          <div class="col-md-3 mb-5">
-            <ul class="list-unstyled link">
-              <li><a href="#">Our Location</a></li>
-              <li><a href="#">The Hosts</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact</a></li>
-              <li><a href="#">Restaurant</a></li>
-            </ul>
-          </div>
-          <div class="col-md-3 mb-5 pr-md-5 contact-info">
-            <p><span class="d-block">Address:</span> <span> 98 West 21th Street, Suite 721 New York NY 10016</span></p>
-            <p><span class="d-block">Phone:</span> <span> (+1) 435 3533</span></p>
-            <p><span class="d-block">Email:</span> <span> info@yourdomain.com</span></p>
-          </div>
-          <div class="col-md-3 mb-5">
-            <p>Sign up for our newsletter</p>
-            <form action="#" class="footer-newsletter">
-              <div class="form-group">
-                <input type="email" class="form-control" placeholder="Your email...">
-                <button type="submit" class="btn"><span class="fa fa-paper-plane"></span></button>
-              </div>
-            </form>
-          </div>
+    </div>
+  </div>
+  <div id="confirmation-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="confirmation-modal-label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="confirmation-modal-label">Payment Confirmation</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
-        <div class="row bordertop pt-5">
-          <p class="col-md-6 text-left"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-            
-          <p class="col-md-6 text-right social">
-            <a href="#"><span class="fa fa-tripadvisor"></span></a>
-            <a href="#"><span class="fa fa-facebook"></span></a>
-            <a href="#"><span class="fa fa-twitter"></span></a>
-          </p>
+        <div class="modal-body">
+          <p>Welcome, <span id="confirmation-name"></span>!</p>
+          <p>Phone: <span id="confirmation-phone"></span></p>
+          <p>Date Range: <span id="confirmation-date-range"></span></p>
+          <p>Please proceed with the payment using Apple Pay. <span id="confirmation-amount"></span></p>
+          <button id="apple-pay-button" class="btn btn-primary">Pay with Apple Pay</button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
         </div>
       </div>
-    </footer>
-    
+    </div>
+  </div>
+  
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -349,5 +234,113 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <!-- <script src="js/jquery.waypoints.min.js"></script> -->
     <script src="js/aos.js"></script>
     <script src="js/main.js"></script>
+
+   
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+  <!-- <script>
+    $(document).ready(function() {
+      // Open the modal when the input is clicked
+      $("#booking-input").click(function() {
+        $("#booking-modal").modal("show");
+      });
+  
+      // Initialize the date range picker
+      $("#date-range").daterangepicker({
+        opens: "center",
+        drops: "up"
+      });
+  
+      // Close the modal when the form is submitted
+      $("form").submit(function(event) {
+        event.preventDefault();
+        $("#booking-modal").modal("hide");
+  
+        var name = $("#name").val();
+        var phone = $("#phone").val();
+        var dateRange = $("#date-range").val();
+  
+        // Open the confirmation modal with selected booking details
+        $("#confirmation-modal #confirmation-name").text(name);
+        $("#confirmation-modal #confirmation-phone").text(phone);
+        $("#confirmation-modal #confirmation-date-range").text(dateRange);
+        $("#confirmation-modal").modal("show");
+      });
+  
+      // Handle payment and continue button click in the confirmation modal
+      $("#confirmation-modal .btn-payment-continue").click(function() {
+        // Handle payment logic here
+  
+        // Close the confirmation modal and open a new modal for the next step
+        $("#confirmation-modal").modal("hide");
+        $("#next-step-modal").modal("show");
+      });
+    });
+  </script> -->
+
+
+  <script>
+    $(document).ready(function() {
+      // Open the modal when the input is clicked
+      $("#booking-input").click(function() {
+        $("#booking-modal").modal("show");
+      });
+  
+      // Initialize the date range picker
+      $("#date-range").daterangepicker({
+        opens: "center",
+        drops: "up"
+      });
+  
+      // Close the modal when the form is submitted
+      $("form").submit(function(event) {
+        event.preventDefault();
+        $("#booking-modal").modal("hide");
+  
+        var name = $("#name").val();
+        var phone = $("#phone").val();
+        var dateRange = $("#date-range").val();
+  
+        // Calculate the amount based on the date range
+        var startDate = moment($("#date-range").data('daterangepicker').startDate);
+        var endDate = moment($("#date-range").data('daterangepicker').endDate);
+        var days = endDate.diff(startDate, 'days') + 1;
+        var thursFriSatDays = 0;
+        var restDays = 0;
+        
+        for (var i = 0; i < days; i++) {
+          var currentDate = moment(startDate).add(i, 'days');
+          var dayOfWeek = currentDate.day();
+          if (dayOfWeek === 4 || dayOfWeek === 5 || dayOfWeek === 6) { // Thursday, Friday, Saturday
+            thursFriSatDays++;
+          } else {
+            restDays++;
+          }
+        }
+  
+        var amount = (thursFriSatDays * 3000) + (restDays * 2500);
+  
+        // Open the confirmation modal with selected booking details and amount
+        $("#confirmation-modal #confirmation-name").text(name);
+        $("#confirmation-modal #confirmation-phone").text(phone);
+        $("#confirmation-modal #confirmation-date-range").text(dateRange);
+        $("#confirmation-modal #confirmation-amount").text(amount);
+        $("#confirmation-modal").modal("show");
+      });
+  
+      // Handle payment and continue button click in the confirmation modal
+      
+      $("#confirmation-modal .btn-payment-continue").click(function() {
+        // Handle payment logic here
+  
+        // Close the confirmation modal and open a new modal for the next step
+        $("#confirmation-modal").modal("hide");
+        $("#next-step-modal").modal("show");
+      });
+    });
+    </Script>
   </body>
 </html>
