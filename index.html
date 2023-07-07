@@ -26,7 +26,7 @@
   <style>
     /* Styles for the modal */
     .modal-dialog {
-      max-width: 70%;
+      max-width: 95%;
       margin: 1.75rem auto;
     }
 
@@ -198,6 +198,21 @@
               <label for="date-range">Date Range:</label>
               <input type="text" id="date-range" class="form-control" required>
             </div>
+            <div class="form-group">
+              <label>Additional Services:</label>
+              <div class="form-check">
+                <input type="checkbox" id="food-service" class="form-check-input">
+                <label class="form-check-label" for="food-service">Food</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" id="chef-service" class="form-check-input">
+                <label class="form-check-label" for="chef-service">Chef</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" id="other-service" class="form-check-input">
+                <label class="form-check-label" for="other-service">Other Service</label>
+              </div>
+            </div>
             <button type="submit" class="btn btn-primary">Book</button>
           </form>
         </div>
@@ -217,11 +232,20 @@
           <p>Welcome, <span id="confirmation-name"></span>!</p>
           <p>Phone: <span id="confirmation-phone"></span></p>
           <p>Date Range: <span id="confirmation-date-range"></span></p>
+          <p>Services amount: <span id="confirmation-services_amount"></span></p>
+          
+          <p>Selected Services:</p>
+        <ul id="confirmation-services"></ul>
           <p>Please proceed with the payment using Apple Pay. <span id="confirmation-amount"></span></p>
-          <button id="apple-pay-button" class="btn btn-primary">Pay with Apple Pay</button>
         </div>
+        
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          <div class="mr-auto">
+            <button id="apple-pay-button" class="btn btn-primary">Pay with Apple Pay</button>
+          </div>
+          <div class="ml-auto">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+          </div>
         </div>
       </div>
     </div>
@@ -292,8 +316,44 @@
       // Initialize the date range picker
       $("#date-range").daterangepicker({
         opens: "center",
-        drops: "up"
-      });
+        drops: "up",
+        isInvalidDate: function(date) {
+            // Disable random ranges of dates in the future
+           
+            var disabledRanges = [
+            '07/20/2023 - 07/25/2023',
+            '07/11/2023 - 07/13/2023'
+            // Add more disabled ranges as needed
+          ];
+
+          for (var i = 0; i < disabledRanges.length; i++) {
+            var range = disabledRanges[i].split(" - ");
+            var disabledStart = moment(range[0], "MM/DD/YYYY");
+            var disabledEnd = moment(range[1], "MM/DD/YYYY");
+            if (date.isBetween(disabledStart, disabledEnd, null, '[]')) {
+              return true;
+            }
+          }
+
+            // Disable all past days
+            var today = moment().startOf('day');
+            var disabledPastRange = [null, today];
+
+            disabledRanges.push(disabledPastRange);
+
+            for (var i = 0; i < disabledRanges.length; i++) {
+              var disabledStart = disabledRanges[i][0];
+              var disabledEnd = disabledRanges[i][1];
+              if (date.isBetween(disabledStart, disabledEnd, null, '[]')) {
+                return true;
+              }
+            }
+
+            return false;
+          }
+
+  });
+  
   
       // Close the modal when the form is submitted
       $("form").submit(function(event) {
@@ -303,7 +363,18 @@
         var name = $("#name").val();
         var phone = $("#phone").val();
         var dateRange = $("#date-range").val();
-  
+
+        var services = [];
+        if ($("#food-service").is(":checked")) {
+          services.push("Food (300 QAR)");
+        }
+        if ($("#chef-service").is(":checked")) {
+          services.push("Chef (300 QAR)");
+        }
+        if ($("#other-service").is(":checked")) {
+          services.push("Other Service (300 QAR)");
+        }
+        var services_amount = services.length * 300;
         // Calculate the amount based on the date range
         var startDate = moment($("#date-range").data('daterangepicker').startDate);
         var endDate = moment($("#date-range").data('daterangepicker').endDate);
@@ -328,6 +399,10 @@
         $("#confirmation-modal #confirmation-phone").text(phone);
         $("#confirmation-modal #confirmation-date-range").text(dateRange);
         $("#confirmation-modal #confirmation-amount").text(amount);
+        $("#confirmation-modal #confirmation-services_amount").text(services_amount);
+        services.forEach(function(service) {
+          $("#confirmation-modal #confirmation-services").append("<li>" + service + "</li>");
+        });
         $("#confirmation-modal").modal("show");
       });
   
